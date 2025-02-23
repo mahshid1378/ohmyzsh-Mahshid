@@ -562,3 +562,38 @@ Oh My Zsh is released under the [MIT license](LICENSE.txt).
 Oh My Zsh was started by the team at [Planet Argon](https://www.planetargon.com/?utm_source=github), a
 [Ruby on Rails development agency](https://www.planetargon.com/services/ruby-on-rails-development?utm_source=github).
 Check out our [other open source projects](https://www.planetargon.com/open-source?utm_source=github).
+
+
+After learning the Linux course of Jadi Mirmirani, a great person in the Linux and networking sector, I was also looking for a suitable project where I could improve my Linux skills, so I came across this repository.
+It took me 2 weeks to implement this repository, but I am very happy that due to the powerful team and the creation of this repository, I was able to increase my ability in this sector.
+- I will also briefly describe the challenges I faced while implementing this repository:
+
+
+1) Challenge 1:when I installed plugins or themes in Oh My Zsh, they didn't work. After checking, this problem was due to an error in the ~/.zshrc file or the way plugins and themes are loaded. The solution I found using different searches and checks was as follows.
+After setting the file, I ran the following command.
+
+solve-> 
+```sh
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+```
+ To set the themes ~/.zshrc with the following command:
+```sh
+ZSH_THEME="agnoster"
+```
+ Load the changes with the command source ~/.zshrc.
+
+
+2) Challenge 2: The terminal screen was not loading properly. In fact, after installing Oh My Zsh, the terminal screen was not loading properly and the display was messed up. After numerous searches, I was able to find the reason and solution:
+The problem was with the installed plugins or themes and additional resources in the ~/.zshrc file, which were causing slowness or disruption in the terminal.
+I disabled all additional plugins and after testing, I kept only one or two plugins active:
+solve-> 
+```sh
+plugins=(git)
+```
+I changed the complex themes to simpler themes.
+```sh
+ZSH_THEME="robbyrussell"
+```
+3. After making these changes, I reloaded the ~/.zshrc file with the source ~/.zshrc command.
+
+In this way, my problems in running this repository were resolved.
